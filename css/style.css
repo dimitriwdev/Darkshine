@@ -1,0 +1,377 @@
+
+/*----------------------------- base style -------------------------------*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    background-color: #000;
+    color: #fff;
+    padding: 1em 1vw 0 1vw;
+    
+}
+
+h1{
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+
+#secondSection h1{
+    font-size: 1.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid silver; 
+}
+
+#secondSection h1:hover{
+    color: yellow;
+}
+
+h3{
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin-top: 1em;
+}
+
+p{
+    font-size: 1em;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+nav a{
+    color: #fff;
+}
+
+section a, footer p{
+    color: silver;
+}
+
+/*-------------------------- End of base style -------------------------*/
+
+/*------------------------------- Header -------------------------------*/
+
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+/*------------------------- Navigation ----------------------------*/
+nav
+	{
+		display: none;
+		width: 100%;
+	}
+    
+nav a{
+    display: block;
+    width: 100%;
+    height: 5vh;
+    line-height: 5vh;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    border-bottom: 2px solid rgb(105,105,105);
+}
+
+nav a:hover, nav a:active
+	{
+		background-color: #fff;
+		color: #000;
+	}
+	
+/*-------------------------- Hamburger menu ---------------------------*/
+#menuIcon{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+}
+
+#menuIcon span{
+    display: block;
+    background-color: #fff;
+    height: 5px;
+    width: 30px;
+    margin-bottom: 5px;
+}
+#menuIcon span:last-child{
+    margin-bottom: 0;    
+}
+/*----------------------End of Hamburger menu ---------------------------*/
+/*--------------------------------------- End of Header ---------------------------------------*/
+
+/*------------------------ section slider --------------------------*/
+#firstSection{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+/*-------------------------------------------------------------- Slider ---------------------------------------------------------------*/
+
+#slider-container{
+    display: flex;
+    justify-content: center;
+    margin-top: 1em;
+}
+
+
+.slides{
+    display: none;     /* images hidden by default */
+}
+.slides img{
+    width: 100%;
+}
+
+.description{
+    display: none;   /* Description hidden by default*/
+    padding: 1em;
+}
+
+/*--------------------------------------------------------- End of Slider --------------------------------------------------------------*/
+
+#thumbs{ 
+    display: flex;
+    justify-content: center;
+    padding: 1em 0;
+}
+
+.thumbImg{
+    cursor: pointer;
+}
+
+.thumbImg p{
+    display: none;
+}
+
+.thumbImg img{
+    max-width: 100%;
+    border: 2px solid #fff;
+}
+
+
+
+/*--------------------- End of section slider --------------------*/
+
+/*--------------------- subbaner --------------------*/
+
+aside{
+    display: none;
+    background-color: rgb(50,50,50);
+    padding: 1em;
+    align-items: center;
+    
+}
+
+
+/*--------------------- End of subbaner --------------------*/
+
+/*-------------------------- Section2 ----------------------------*/
+
+
+/*------------------------------------------------------- Show more / Show less Feature ------------------------------------------------------*/
+#moreLess{
+    font-size: 0.7em;
+    color: yellow;
+}
+
+#seeMore{
+    display: none;
+}
+
+#seeMore > p{
+    padding: 1em 0;
+}
+
+/*---------------------------------------------------- End of Show more / Show less Feature ---------------------------------------------------*/
+
+
+#colLayout{
+    display: flex;
+    flex-direction: column;
+}
+
+.column{
+    display: flex;
+}
+
+.column img{
+    padding-right: 1em;
+    border-right: 1px solid #fff;
+    margin-right: 1em;
+    flex: 0 1 50%;
+}
+
+.column section{
+    flex: 0 1 40%;
+}
+
+.column section p{
+    padding: 1em 0 0.5em 0;
+}
+
+section a{
+    text-transform: capitalize;
+}
+
+
+
+/*------------------------ footer ----------------------*/
+
+footer{
+  background-color: rgb(50,50,50);
+  display: flex;
+  align-items: center;   
+  justify-content: center; /* fallback to center the text as soon as the space will be availbale*/
+  text-align: center;
+  padding: 1em;
+  margin-top: 1em;
+}
+
+footer p {
+    font-size: 0.8em;
+    color: silver;
+}
+
+/*---------------------- End of Footer ----------------------*/
+
+/*--------------------------------- media queries ---------------------------------*/
+
+
+@media only screen and (min-width: 768px){
+
+    nav{
+        display: block;
+    }
+
+}
+
+
+@media only screen and (min-width: 1300px){
+
+    body{
+        padding: 1em 10vw 0 10vw;
+    }
+
+    header a{
+        flex: 0 1 50%;
+    }
+    /* navigation */
+    #menuIcon{
+        display: none;
+    }
+  
+    nav{
+        flex: 0 1 50%;  
+    }
+
+    nav ul{
+        display: flex;
+        justify-content: flex-end;
+        
+    }
+    
+    nav li{
+        display: flex;
+        justify-content: space-around;
+    }
+    nav ul a{
+        display: block;
+        border-bottom: none;
+        padding: 0.5em 1em;
+    }
+
+    /*----------- section1 -----------*/
+
+    #firstSection{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    /* Slider */
+
+    #slider-container{
+        flex-direction: column;
+        flex: 0 1 50%;
+        margin-top: 2em;
+    }
+
+    .slides{
+        display: none;     /* images hidden by default */
+    }
+
+    .description{
+        display: block;
+    }
+
+    /* Fading animation */
+    .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+    }
+    
+    @keyframes fade {
+        from {opacity: .4}
+        to {opacity: 1}
+    }
+
+    /* End of Slider */
+
+    #thumbs{
+        flex-direction: column;
+        flex: 0 1 40%;
+        padding-left: 5vw;
+    }
+
+    .thumbImg{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        margin-bottom: 1em;
+    }
+
+    .thumbImg img{
+        flex: 0 1 20%;
+        margin-left: 2em;
+    }
+
+    .thumbImg p{
+        display: block;
+        flex: 1 1 40%;
+        padding-left: 1em;
+        
+    }
+
+    aside{
+        display: flex;
+        margin-bottom: 1em;
+    }
+
+
+
+    /*----------- End of section1 -----------*/
+
+    /*----------- section2 -----------*/
+
+    #colLayout{
+       flex-direction: row; 
+    }
+
+    .column img{
+        max-width: 30%;
+    }
+
+    .column section{
+        flex: 1 1 50%;
+        padding-right: 2em;
+    } 
+
+    /*----------- End of section2 -----------*/
+}
